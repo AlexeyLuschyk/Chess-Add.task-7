@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <title>chess</title>
+    <style>
+    body {
+        background-color: cyan;
+    }
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size:40px;
+    }
+    table {
+        border-collapse: collapse;
+        background-color: white;
+        width:432px;
+        height:432px;
+        margin: auto;
+    }
+    .figures {
+        background-image: url('chess.png');
+    }
+    td {
+        font-weight: bold;
+        text-align: center;
+    }
+    .borderb{
+        border-bottom: 2px black solid;
+    }
+    .bordert{
+        border-top: 2px black solid;
+    }
+    .borderl{
+        border-left: 2px black solid;
+    }
+    .borderr{
+        border-right: 2px black solid;
+    }
+    .angle_cell{
+        width:24px;
+        height:24px;
+    }
+    .chess_cell-black{
+        width:48px;
+        height:48px;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .dark_king{
+        background-position: 0 0;
+    }
+    .white_king{
+        background-position: 0 -48px;
+    }
+    .dark_queen{
+        background-position: -48px 0;
+    }
+    .white_queen{
+        background-position: -48px -48px;
+    }
+    .dark_rook{
+        background-position:-96px 0;
+    }
+    .white_rook{
+        background-position:-96px -48px;
+    }
+    .dark_knight{
+        background-position:-192px 0;
+    }
+    .white_knight{
+        background-position:-192px -48px;
+    }
+    .dark_bishop{
+        background-position: -144px 0;
+    }
+    .white_bishop{
+        background-position: -144px -48px;
+    }
+    .dark_pawn{
+        background-position: -240px 0;
+    }
+    .white_pawn{
+        background-position: -240px -48px;
+    }
+    </style>
+
+	</head>
+
+	<body>
+        <h1>Шахматы</h1>
+        <table>
+            <tr>
+                <td class="angle_cell borderl bordert "></td>
+                <td class="bordert borderb">a</td>
+                <td class="bordert borderb">b</td>
+                <td class="bordert borderb">c</td>
+                <td class="bordert borderb">d</td>
+                <td class="bordert borderb">e</td>
+                <td class="bordert borderb">f</td>
+                <td class="bordert borderb">g</td>
+                <td class="bordert borderb">h</td>
+                <td class="angle_cell bordert borderr"></td>
+            </tr>
+            <tr>
+                <td class="borderr borderl">8</td>
+                <td class="figures dark_rook"></td>
+                <td class='chess_cell-black figures dark_knight'></td>
+                <td class="figures dark_bishop"></td>
+                <td class="chess_cell-black figures dark_queen"></td>
+                <td class="figures dark_king"></td>
+                <td class="chess_cell-black figures dark_bishop"></td>
+                <td class="figures dark_knight"></td>
+                <td class="chess_cell-black figures dark_rook"></td>
+                <td class="borderr borderl">8</td>
+            </tr>
+            <tr>
+                <td class="borderr borderl">7</td>
+                <td class='chess_cell-black figures dark_pawn'></td>
+                <td class="figures dark_pawn"></td>
+                <td class='chess_cell-black figures dark_pawn'></td>
+                <td class="figures dark_pawn"></td>
+                <td class='chess_cell-black figures dark_pawn'></td>
+                <td class="figures dark_pawn"></td>
+                <td class='chess_cell-black figures dark_pawn'></td>
+                <td class="figures dark_pawn"></td>
+                <td class="borderr borderl">7</td>
+            </tr>
+            <tr>
+                <td class="borderr borderl">6</td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td class="borderr borderl">6</td>
+            </tr>
+            <tr>
+                <td class="borderr borderl">5</td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class="borderr borderl">5</td>
+            </tr>
+            <tr>
+                <td class="borderr borderl">4</td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td class="borderr borderl">4</td>
+            </tr>
+            <tr>
+                <td class="borderr borderl">3</td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class='chess_cell-black'></td>
+                <td></td>
+                <td class="borderr borderl">3</td>
+            </tr>
+            <tr>
+                <td class="borderr borderl">2</td>
+                <td class="figures white_pawn"></td>
+                <td class='chess_cell-black figures white_pawn'></td>
+                <td class="figures white_pawn"></td>
+                <td class='chess_cell-black figures white_pawn'></td>
+                <td class="figures white_pawn"></td>
+                <td class='chess_cell-black figures white_pawn'></td>
+                <td class="figures white_pawn"></td>
+                <td class='chess_cell-black figures white_pawn'></td>
+                <td class="borderr borderl">2</td>
+            </tr>
+            <tr>
+                <td class="borderr borderl">1</td>
+                <td class='chess_cell-black figures white_rook'></td>
+                <td class="figures white_knight"></td>
+                <td class='chess_cell-black figures white_bishop'></td>
+                <td class="figures white_queen"></td>
+                <td class='chess_cell-black figures white_king'></td>
+                <td class="figures white_bishop"></td>
+                <td class='chess_cell-black figures white_knight'></td>
+                <td class="figures white_rook"></td>
+                <td class="borderr borderl">1</td>
+            </tr>            
+            <tr>
+                <td class="angle_cell borderl borderb "></td>
+                <td class="bordert borderb">a</td>
+                <td class="bordert borderb">b</td>
+                <td class="bordert borderb">c</td>
+                <td class="bordert borderb">d</td>
+                <td class="bordert borderb">e</td>
+                <td class="bordert borderb">f</td>
+                <td class="bordert borderb">g</td>
+                <td class="bordert borderb">h</td>
+                <td class="angle_cell borderb borderr"></td>
+            </tr>
+
+
+        </table>
+
+
+	</body>
+</html>
